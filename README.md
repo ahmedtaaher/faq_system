@@ -43,3 +43,12 @@ faq-system/
 ├── migrations/        # Goose database migrations
 ├── config/            # Configuration management
 └── .env               # Environment variables
+
+---
+
+## How to Run the Project
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/ahmedtaaher/faq_system
+cd faq-system
