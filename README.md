@@ -38,7 +38,7 @@ faq-system/
 ├── repository/        # Data access layer
 ├── middleware/        # Auth & role middleware
 ├── routes/            # Route definitions
-├── database/          # Database connection
+├── db/                # Database connection
 ├── utils/             # Helper functions
 ├── migrations/        # Goose database migrations
 ├── config/            # Configuration management
