@@ -36,8 +36,7 @@ How to run the project:
 1. Clone the repository
 git clone https://github.com/ahmedtaaher/faq_system
 cd faq-system
-2. Install dependencies
-go mod download
+2. Install dependencies: go mod download
 3. Install Goose
 go install github.com/pressly/goose/v3/cmd/goose@latest
 4. Setup environment variables
