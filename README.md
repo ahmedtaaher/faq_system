@@ -122,8 +122,4 @@ go run .
   }
 } 
 ```
-##  Submission Information
 
-- **Submitted by:** Ahmed Taaher (@ahmedtaaher)  
-- **Submitted to:** @Raed Wasel 
-- **Repository:** [https://github.com/ahmedtaaher/faq_system](https://github.com/ahmedtaaher/faq_system)
