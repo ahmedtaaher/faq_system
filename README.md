@@ -43,12 +43,87 @@ faq-system/
 ├── migrations/        # Goose database migrations
 ├── config/            # Configuration management
 └── .env               # Environment variables
+```
 
 ---
 
-## How to Run the Project
+## How to run the project
 
-### 1. Clone the repository
+## 1. Clone the repository
+
 ```bash
 git clone https://github.com/ahmedtaaher/faq_system
 cd faq-system
+```
+## 2. Install dependencies
+
+```bash
+go mod download
+```
+## 3. Install Goose
+
+```bash
+go install github.com/pressly/goose/v3/cmd/goose@latest
+```
+## 4.Setup environment variables
+
+```bash
+Setup environment variables
+```
+## Edit .env with your credentials:
+```text
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=your_password
+DB_NAME=yamm_faq
+SERVER_PORT=8080
+JWT_SECRET=your-super-secret-jwt-key
+```
+## 5. Create the database
+```bash 
+createdb faq_system
+```
+## 6. Run migrations
+```bash
+cd migrations
+goose postgres "host=localhost port=5432 user=postgres password=your_password dbname=yamm_faq sslmode=disable" up
+cd ..
+```
+## 7. Run the application
+```bash 
+go run .
+```
+
+## API Endpoints
+
+### Authentication – Signup
+
+**POST** `/api/v1/auth/signup`
+#### Request
+```json
+{
+  "email": "user@example.com",
+  "password": "password123",
+  "user_type": "customer"
+}
+```
+#### Response 
+```json 
+{
+    "success": true,
+  "message": "User registered successfully",
+  "data": {
+    "user": {
+      "id": 1,
+      "email": "user@example.com",
+      "user_type": "customer"
+    }
+  }
+} 
+```
+##  Submission Information
+
+- **Submitted by:** Ahmed Taaher (@ahmedtaaher)  
+- **Submitted to:** @Raed Wasel 
+- **Repository:** [https://github.com/ahmedtaaher/faq_system](https://github.com/ahmedtaaher/faq_system)
